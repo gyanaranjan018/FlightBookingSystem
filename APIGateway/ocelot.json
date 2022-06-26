@@ -1,0 +1,236 @@
+{
+  "Routes": [
+    //BookingService Api
+
+    {
+      "DownstreamPathTemplate": "/api/booking/ticket/{pnr}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 60500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/ticket/{pnr}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Booking/history",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 60500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/booking/history",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Booking/all",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 60500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/booking/all",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Booking/cancel/{pnr}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 60500
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/booking/cancel/{pnr}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    //AuthService API
+    {
+      "DownstreamPathTemplate": "/api/admin/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 16415
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/admin/login",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/user/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 16415
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/user/login",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/user/register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 16415
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/user/register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    //AirlineService API -- AirelineController
+
+    {
+      "DownstreamPathTemplate": "/api/airline/register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 38325
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/airline/register",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/airline",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 38325
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/airlines",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/airline/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 38325
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/airlines/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/airline/changestatus/{id}/{status}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 38325
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/airlines/changestatus/{id}/{status}",
+      "UpstreamHttpMethod": [ "PUT" ]
+    },
+
+    //AirlineService API -- AirelineInventoryController
+
+    {
+      "DownstreamPathTemplate": "/api/airlineinventory",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 38325
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/airline/inventory/add",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/flight/search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 38325
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/search",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/flight/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 38325
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/flight/airports",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 38325
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/airports",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/booking",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 38325
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/flight/booking",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+
+    //AirlinrService - DicountCoupon Controller
+
+    {
+      "DownstreamPathTemplate": "/api/discountcoupon",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 38325
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/discountcoupon",
+      "UpstreamHttpMethod": [ "POST", "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/discountcoupon/code/{code}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 38325
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1.0/discountcoupon/code/{code}",
+      "UpstreamHttpMethod": [ "POST", "GET" ]
+    }
+
+
+
+  ]
+}
+
